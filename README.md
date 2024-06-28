@@ -1,6 +1,6 @@
 # PhD Thesis
 
-Repository to my PhD thesis (2023-2026), on the *Search for $$B \to K \nu \nu$$ decays at the Belle~II experiment*.
+Repository to my PhD thesis (2023-2026), on the *Search for* $B \to K \nu \nu$ *decays at the Belle~II experiment*.
 
 Template taken from [Cyrille Praz's work](https://github.com/cyrraz/thesis-template).
 
