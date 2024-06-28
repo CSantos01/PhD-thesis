@@ -1,6 +1,10 @@
-Repository to my PhD thesis (2023-2026), on the *Search for $B \to K \nu \nu$ decays at the Belle~II experiment*.
+# PhD Thesis
+
+Repository to my PhD thesis (2023-2026), on the *Search for $$B \to K \nu \nu$$ decays at the Belle~II experiment*.
 
 Template taken from [Cyrille Praz's work](https://github.com/cyrraz/thesis-template).
+
+## Organisation
 
 The main files and folders are:
 * `thesis.tex`: main tex file whose purpose is to import all the other tex files;

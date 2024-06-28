@@ -1,1 +1,1 @@
-Cyrille Praz ([@cyrraz](https://github.com/cyrraz))
+Corentin Santos ([@CSantos01](https://github.com/CSantos01))
