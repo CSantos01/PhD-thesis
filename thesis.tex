@@ -6,12 +6,20 @@
 \input{include/styles.tex}
 \input{include/definitions.tex}
 
+% Acronyms
+% \makeglossaries
+\makenoidxglossaries
+\input{include/glossary.tex}
+
 \begin{document}
 
 % Chapters
 \input{chapters/title.tex}
 \input{chapters/abstract.tex}
 \tableofcontents
+
+% \listoffigures
+% \listoftables
 \clearpage
 \input{chapters/introduction.tex}
 \input{chapters/probability.tex}
@@ -19,7 +27,9 @@
 
 % Bibliography
 \newpage
+\printnoidxglossary[title=List of acronyms, toctitle=List of aronyms, type=acronym]
+\printacronyms
 \bibliographystyle{plain}
 \bibliography{include/bibliography}
 
-\end{document} 
+\end{document}
