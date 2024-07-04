@@ -1,10 +1,23 @@
-\section{The Standard Model of particle physics} \label{sec:SM}
+\section{The Standard Model of particle physics}\label[section]{sec:SM}
 
 The \gls{SM} provides mathematical tools to describe the interactions between elementary particles, which can be \textit{fermions}, with half-odd spin, or \textit{bosons}, with integer spin.
 The elementary bosons, or \textit{gauge bosons}, act as mediators of the fundamental interactions: \textit{electromagnetic}, \textit{weak} and \textit{strong} interactions.
 The elementary fermions are, in this theory, 12 particles (and 12 anti-particles) forming multiplets of the groups SU(3)$_C$, SU(2)$_L$ and U(1)$_Y$.
 
 The $SU(2)_L \otimes U(1)_Y$ gauge group describes the electroweak interaction, mediated respectively by the $\left(W^i\right)_{i\in\llbracket1,3\rrbracket}$ and $B$ bosons, acting on the \textit{weak isospin} $T$ and the \textit{weak hypercharge} $Y$.
+At lower energy, this symmetry is spontaneously broken by the Higgs mechanism, leading to the appearance of the $W^{\pm}$ and $Z$ bosons, and the photon $\gamma$, which fields are defined as such:
+
+\begin{equation*}
+    W^{\pm} = \frac{1}{\sqrt{2}}\left(W^1 \mp iW^2\right),
+    \quad
+    Z = W^3\cos\theta_W - B\sin\theta_W,
+    \quad
+    A = W^3\sin\theta_W + B\cos\theta_W
+\end{equation*}
+
+where $\theta_W$ is the weak, or Weinberg, angle.
+One also need to redefine the generator of $U(1)_Y$ as $Q = T_3 + \frac{Y}{2}$, which is the electric charge operator.
+Additionnaly, this symmetry breaking mechanism leads to the appearance the Higgs boson $H$, which is the only scalar elementary particle in the \gls{SM}.
 
 The SU(3)$_C$ gauge group describes the strong interaction, and act only on particles with a \textit{colour charge} $C\in\{R,G,B,\Bar{R},\Bar{G},\Bar{B}\}$. This group being of dimension 8, it has 8 gauge bosons, called \textit{gluons} $\left(g_i\right)_{i\in\llbracket0,8\rrbracket}$.
 Elementary fermions can then be separated in two categories:
@@ -106,5 +119,62 @@ Elementary fermions can then be separated in two categories:
         b'_R
     \end{equation*}
 
-    with the $L$ and $R$ subscripts indicating the chirality of the particles, left-handed or right-handed, respectively.
-    The right-handed neutrinos are not included in the \gls{SM}.
+with the $L$ and $R$ subscripts indicating the chirality of the particles, left-handed or right-handed, respectively.
+The right-handed neutrinos are not included in the \gls{SM}.
+
+The primes in the expressions above indicate that the weak eigenstates are not the same as the mass eigenstates. 
+The two bases are related by the unitary \gls{CKM} matrix, $V_{\text{CKM}} \in M_3\left(\mathbb{R}\right)$:
+
+\begin{equation}
+    \begin{pmatrix}
+        d' \\
+        s' \\
+        b'
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        V_{ud} & V_{us} & V_{ub} \\
+        V_{cd} & V_{cs} & V_{cb} \\
+        V_{td} & V_{ts} & V_{tb}
+    \end{pmatrix}
+    \begin{pmatrix}
+        d \\
+        s \\
+        b
+    \end{pmatrix}
+\end{equation}
+
+Due to physical reasons, we need only three mixing angles $\left(\theta_{12}, \theta_{13}, \theta_{23}\right) \in \mathbb{R}^3$ and one phase $\delta_{13} \in \mathbb{R}$ in order to fully parametrize this matrix.
+This is called the \textit{standard} representation of the \gls{CKM} matrix.
+Another useful representation, related to the standard one, is called the \textit{Wolfenstein} representation, which uses the four parameters $\left(\lambda, A, \rho, \eta\right) \in \mathbb{R}^4$.
+
+The unitary of the \gls{CKM} matrix implies that:
+
+\begin{equation}\label[equation]{eq:CKM_unitarity}
+    \sum_{i \in \{u, c, t\}} V_{ij}V_{ik}^* = \sum_{i \in \{u, c, t\}} V_{ji}V_{ki}^* = \delta_{jk}
+\end{equation}
+
+where $\delta$ is the Kronecker symbol and $\left(j, k\right) \in \{d, s, b\}^2$.
+Developping the first sum of \cref{eq:CKM_unitarity} for $j = d$ and $k = b$ gives:
+
+\begin{align}
+    V_{ud}V_{ub}^* + V_{cd}V_{cb}^* + V_{td}V_{tb}^* = 0 \\
+    \Longleftrightarrow 1 + \frac{V_{cd}V_{cb}^*}{V_{ud}V_{ub}^*} + \frac{V_{td}V_{tb}^*}{V_{ud}V_{ub}^*} = 0
+\end{align}
+
+supposing that $V_{ud}V_{ub}^* \neq 0$ (which is true for physical reasons).
+The last relation describe a \textit{unitarity triangle} in the complex plane, with two of its vertices at $C = (0, 0)$ and $B = (1, 0)$ respectively.
+The last vertex is defined to be at $A = (\Bar{\rho}, \Bar{\eta})$, with
+
+\begin{equation}
+    \Bar{\rho} = \rho\left(1 - \frac{\lambda^2}{2}\right), \quad \Bar{\eta} = \eta\left(1 - \frac{\lambda^2}{2}\right)
+\end{equation}
+
+using the Wolfenstein parameters.
+Consequently, the lenghts of the triangle sides are:
+
+\begin{align}
+    \Bar{AB} = \abs{\frac{V_{td}V_{tb}^*}{V_{ud}V_{ub}^*}} \\
+    \Bar{AC} = \abs{\frac{V_{cd}V_{cb}^*}{V_{ud}V_{ub}^*}} \\
+    \Bar{BC} = 1
+\end{align}
