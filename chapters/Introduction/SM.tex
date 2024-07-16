@@ -144,8 +144,12 @@ The two bases are related by the unitary \gls{CKM} matrix, $V_{\text{CKM}} \in M
     \end{pmatrix}
 \end{equation}
 
-Due to physical reasons, we need only three mixing angles $\left(\theta_{12}, \theta_{13}, \theta_{23}\right) \in \mathbb{R}^3$ and one phase $\delta_{13} \in \mathbb{R}$ in order to fully parametrize this matrix.
+It is to be noted that one can also right this change of basis for the other quarks' states $(u, c, t)$ and $(u', c', t')$.
+
+This matrix encodes many information.
+Firstly, due to physical reasons, we need only three mixing angles $\left(\theta_{12}, \theta_{13}, \theta_{23}\right) \in \mathbb{R}^3$ and one phase $\delta_{13} \in \mathbb{R}$ in order to fully parametrize this matrix.
 The phase is interpreted as the \textit{CP-violating} phase and is an important parameter of the \gls{SM} to measure because of its implication in phenomena such as the \textit{matter-antimatter asymmetry}.
+Secondly, the squared modulus of the matrix elements are the probabilities for a quark to change flavour.
 
 The unitary of the \gls{CKM} matrix implies that:
 
@@ -155,12 +159,17 @@ The unitary of the \gls{CKM} matrix implies that:
 \end{align}
 
 where $\delta$ is the Kronecker symbol.
-
-Developping the sum of \cref{eq:CKM_unitarity} for $j = d$ and $k = b$ gives:
+As one can see from the unitarity and the transitions represented by the matrix elements, change of flavour between same sign quarks, also called \gls{FCNC}, cannot occur at tree level.
+It is possible at loop level, but the \gls{SM} predicts very low probabilities for these transitions, because of the \gls{GIM} mechanism, which makes them very interesting to study in order to search for \gls{NP}.
+Let's explain this mechanism.
+Developping the sum of \cref{eq:CKM_unitarity} for $j = d$ and $k = b$ gives
 
 \begin{align}
-    V_{ud}V_{ub}^* + V_{cd}V_{cb}^* + V_{td}V_{tb}^* = 0 \\
-    \Longleftrightarrow 1 + \frac{V_{cd}V_{cb}^*}{V_{ud}V_{ub}^*} + \frac{V_{td}V_{tb}^*}{V_{ud}V_{ub}^*} = 0
+    V_{ud}V_{ub}^* + V_{cd}V_{cb}^* + V_{td}V_{tb}^* = 0
+\end{align}
+
+\begin{align}
+    1 + \frac{V_{cd}V_{cb}^*}{V_{ud}V_{ub}^*} + \frac{V_{td}V_{tb}^*}{V_{ud}V_{ub}^*} = 0
 \end{align}
 
 supposing that $V_{ud}V_{ub}^* \neq 0$ (which is true for physical reasons).
