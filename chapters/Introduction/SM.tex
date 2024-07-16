@@ -122,8 +122,8 @@ Elementary fermions can then be separated in two categories:
 with the $L$ and $R$ subscripts indicating the chirality of the particles, left-handed or right-handed, respectively.
 The right-handed neutrinos are not included in the \gls{SM}.
 
-The primes in the expressions above indicate that the weak eigenstates are not the same as the mass eigenstates. 
-The two bases are related by the unitary \gls{CKM} matrix, $V_{\text{CKM}} \in M_3\left(\mathbb{R}\right)$:
+The primes in the expressions above indicate that the quarks' "\textit{weak}" eigenstates are not the same as their "\textit{mass}" eigenstates. 
+The two bases are related by the unitary \gls{CKM} matrix, $V_{\text{CKM}} \in M_3\left(\mathbb{C}\right)$:
 
 \begin{equation}
     \begin{pmatrix}
@@ -145,17 +145,18 @@ The two bases are related by the unitary \gls{CKM} matrix, $V_{\text{CKM}} \in M
 \end{equation}
 
 Due to physical reasons, we need only three mixing angles $\left(\theta_{12}, \theta_{13}, \theta_{23}\right) \in \mathbb{R}^3$ and one phase $\delta_{13} \in \mathbb{R}$ in order to fully parametrize this matrix.
-This is called the \textit{standard} representation of the \gls{CKM} matrix.
-Another useful representation, related to the standard one, is called the \textit{Wolfenstein} representation, which uses the four parameters $\left(\lambda, A, \rho, \eta\right) \in \mathbb{R}^4$.
+The phase is interpreted as the \textit{CP-violating} phase and is an important parameter of the \gls{SM} to measure because of its implication in phenomena such as the \textit{matter-antimatter asymmetry}.
 
 The unitary of the \gls{CKM} matrix implies that:
 
-\begin{equation}\label[equation]{eq:CKM_unitarity}
-    \sum_{i \in \{u, c, t\}} V_{ij}V_{ik}^* = \sum_{i \in \{u, c, t\}} V_{ji}V_{ki}^* = \delta_{jk}
-\end{equation}
+\begin{align}
+    \sum_{i \in \{u, c, t\}} V_{ij}V_{ik}^* =  \delta_{jk}, \quad \left(j, k\right) \in \{d, s, b\}^2 \label[equation]{eq:CKM_unitarity} \\ 
+    \sum_{i \in \{d, s, b\}} V_{ji}V_{ki}^* = \delta_{jk}, \quad \left(j, k\right) \in \{u, c, t\}^2
+\end{align}
 
-where $\delta$ is the Kronecker symbol and $\left(j, k\right) \in \{d, s, b\}^2$.
-Developping the first sum of \cref{eq:CKM_unitarity} for $j = d$ and $k = b$ gives:
+where $\delta$ is the Kronecker symbol.
+
+Developping the sum of \cref{eq:CKM_unitarity} for $j = d$ and $k = b$ gives:
 
 \begin{align}
     V_{ud}V_{ub}^* + V_{cd}V_{cb}^* + V_{td}V_{tb}^* = 0 \\
@@ -163,18 +164,22 @@ Developping the first sum of \cref{eq:CKM_unitarity} for $j = d$ and $k = b$ giv
 \end{align}
 
 supposing that $V_{ud}V_{ub}^* \neq 0$ (which is true for physical reasons).
-The last relation describe a \textit{unitarity triangle} in the complex plane, with two of its vertices at $C = (0, 0)$ and $B = (1, 0)$ respectively.
-The last vertex is defined to be at $A = (\Bar{\rho}, \Bar{\eta})$, with
-
-\begin{equation}
-    \Bar{\rho} = \rho\left(1 - \frac{\lambda^2}{2}\right), \quad \Bar{\eta} = \eta\left(1 - \frac{\lambda^2}{2}\right)
-\end{equation}
-
-using the Wolfenstein parameters.
+The last relation describe the \textit{unitarity triangle} in the complex plane, with two of its vertices at $C = (0, 0)$ and $B = (1, 0)$ respectively.
+The last vertex is defined to be at $A = (\Bar{\rho}, \Bar{\eta}) \in \mathbb{R}^2$
 Consequently, the lenghts of the triangle sides are:
 
 \begin{align}
-    \Bar{AB} = \abs{\frac{V_{td}V_{tb}^*}{V_{ud}V_{ub}^*}} \\
-    \Bar{AC} = \abs{\frac{V_{cd}V_{cb}^*}{V_{ud}V_{ub}^*}} \\
-    \Bar{BC} = 1
+    \Bar{AB} &= \abs{\frac{V_{td}V_{tb}^*}{V_{cd}V_{cb}^*}} \\
+    \Bar{AC} &= \abs{\frac{V_{ud}V_{ub}^*}{V_{cd}V_{cb}^*}} \\
+    \Bar{BC} &= 1
 \end{align}
+
+and the angles, also parametrized by the \gls{CKM} matrix elements, are:
+
+\begin{align}
+    \alpha = \arg\left(\frac{V_{cd}V_{cb}^*}{V_{td}V_{tb}^*}\right) \\
+    \beta =  \arg\left(\frac{V_{td}V_{tb}^*}{V_{cd}V_{cb}^*}\right) \\
+    \gamma = \arg\left(\frac{V_{ud}V_{ub}^*}{V_{cd}V_{cb}^*}\right)
+\end{align}
+
+Hence, the measurement of the sides and angles of the unitarity triangle allows to test the \gls{SM} and search for \gls{NP}.
