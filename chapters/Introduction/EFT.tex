@@ -1,2 +1,19 @@
 \section{An Effective Field Theory approach to the Standard Model} \label[section]{sec:EFT}
 
+Let's go back to the \gls{GIM} mechanism.
+Consider a transition from a $b$ quark to a $d$ quark.
+It is forbidden at tree level, but can occur at loop level, with the exchange of a $W$ boson.
+The amplitude of this transition is proportional to the product of the $b \mapsto j$ and $j \mapsto d$ amplitudes with the mass of the intermediate quark $m_j$, where $j \in (u, c, t)$.
+Moreover because of quantum mechanics, one need to take the sum of the amplitudes for all possible intermediate quarks.
+
+\begin{equation}\label[equation]{eq:FCNC_amplitude}
+    \mathcal{M}_{b \mapsto d} \propto \sum_{j \in (u, c, t)} \frac{V_{bj}V_{jd}^*}{m_j^2}
+\end{equation}
+
+Hence, going back to equation \cref{eq:CKM_unitarity_bd}, if $m_u = m_c = m_t$, one can factorize by $\frac{1}{m_j^2}$ for $j = u$ in \cref{eq:FCNC_amplitude}, and get that the amplitude of the $b \mapsto d$ transition is null.
+If such a symmetry of masses were to exist, \gls{FCNC} would be forbidden at the one-loop level by the \gls{GIM} mechanism.
+However, this equality is viable at very short distance scales and is not true anymore at low energy, meaning that the \gls{GIM} mechanism breakdown at the one-loop level.
+
+This is a good example of the limitations of the \gls{SM}.
+The breakdown of the model as a function of the energy scale is a hint to believe that the \gls{SM} is an effective theory, meaning that it is a low-energy approximation of a more fundamental theory.
+Studying the $B$ meson physics implies that one need to work at various energy scales: the energy scale for new physics, denoted $\Lambda_{\text{NP}}$; the electroweak scale at $M_W$, the mass of the $W$ boson; the scale of the $b$ quark $m_b$; and the energy scale of the strong interaction, $\Lambda_{\text{QCD}}$.
