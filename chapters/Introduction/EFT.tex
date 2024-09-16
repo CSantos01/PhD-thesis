@@ -1,19 +1,34 @@
 \section{An Effective Field Theory approach to the Standard Model} \label[section]{sec:EFT}
 
-Let's go back to the \gls{GIM} mechanism.
+We now return to the \gls{GIM} mechanism.
 Consider a transition from a $b$ quark to a $d$ quark.
-It is forbidden at tree level, but can occur at loop level, with the exchange of a $W$ boson.
-The amplitude of this transition is proportional to the product of the $b \mapsto j$ and $j \mapsto d$ amplitudes with the mass of the intermediate quark $m_j$, where $j \in (u, c, t)$.
-Moreover because of quantum mechanics, one need to take the sum of the amplitudes for all possible intermediate quarks.
+It is forbidden at tree level but can occur at loop level with the exchange of a $W$ boson.
+The amplitude of this transition is proportional to the product of the $b \mapsto j$ and $j \mapsto d$ amplitudes and mass of the intermediate quark $m_j$, where $j \in (u, c, t)$.
+Moreover because of quantum mechanics, one needs to take the sum of the amplitudes for all possible intermediate quarks.
 
 \begin{equation}\label[equation]{eq:FCNC_amplitude}
-    \mathcal{M}_{b \mapsto d} \propto \sum_{j \in (u, c, t)} \frac{V_{bj}V_{jd}^*}{m_j^2}
+    \mathcal{M}_{b \mapsto d} \propto \sum_{j \in (u, c, t)} V_{bj} V_{jd} m_j^2
 \end{equation}
 
-Hence, going back to equation \cref{eq:CKM_unitarity_bd}, if $m_u = m_c = m_t$, one can factorize by $\frac{1}{m_j^2}$ for $j = u$ in \cref{eq:FCNC_amplitude}, and get that the amplitude of the $b \mapsto d$ transition is null.
-If such a symmetry of masses were to exist, \gls{FCNC} would be forbidden at the one-loop level by the \gls{GIM} mechanism.
-However, this equality is viable at very short distance scales and is not true anymore at low energy, meaning that the \gls{GIM} mechanism breakdown at the one-loop level.
+Hence, returning to equation \cref{eq:CKM_unitarity_bd}, if $m_u = m_c = m_t$, we can factorize $m_j^2$ for $j = u$ in \cref{eq:FCNC_amplitude}, and the amplitude of the $b \mapsto d$ transition is null.
+If such a symmetry of masses exists, \gls{FCNC} would be forbidden at the one-loop level by the \gls{GIM} mechanism.
+However, this equality is viable at very short distance scales and is no longer true at low energies, meaning that the \gls{GIM} mechanism breaks down at the one-loop level.
 
 This is a good example of the limitations of the \gls{SM}.
-The breakdown of the model as a function of the energy scale is a hint to believe that the \gls{SM} is an effective theory, meaning that it is a low-energy approximation of a more fundamental theory.
-Studying the $B$ meson physics implies that one need to work at various energy scales: the energy scale for new physics, denoted $\Lambda_{\text{NP}}$; the electroweak scale at $M_W$, the mass of the $W$ boson; the scale of the $b$ quark $m_b$; and the energy scale of the strong interaction, $\Lambda_{\text{QCD}}$.
+The breakdown of the model as a function of the energy scale indicates that \gls{SM} is an effective theory, meaning that it is a low-energy approximation of a more fundamental theory.
+Studying $B$ meson physics implies that it is necessary to work at various energy scales: the energy scale for new physics, denoted $\Lambda_{\text{NP}}$; the electroweak scale at $M_W$, the mass of the $W$ boson; the scale of the $b$ quark $m_b$; and the energy scale of the strong interaction, $\Lambda_{\text{QCD}}$.
+The usual approach to the \gls{SM} is to write Hamiltonian as sum of operators, respecting symmetries of the \gls{SM}, times a coefficient.
+Thus, we can write an effective Hamiltonian at any energy scale $\mu \in \mathbb{R}_{>0}$ as:
+
+\begin{equation}
+    \mathcal{H}_{\text{eff}} = \sum_{i = 1}^N C_i(\mu) O_i(\mu)
+\end{equation}
+
+where $N \in \mathbb{N}^*$ is the order of the series expansion, $O_i$ are operators and $C_i$ are the \textit{Wilson coefficients}, which describe the short-distance physics at higher energy scale.
+For a weak decay, the effective Hamiltonian can be written as:
+
+\begin{equation}\label[equation]{eq:effective_Hamiltonian_weak_decay}
+    \mathcal{H}_{\text{eff}} = \frac{G_F}{\sqrt{2}} \sum_{i =1}^N V^i_{\text{CKM}} C_i(\mu) O_i(\mu) + h.c.
+\end{equation}
+
+where $G_F$ is the \textit{Fermi constant}, $V^i_{\text{CKM}}$ are elements of the \gls{CKM} matrix and $h.c.$ stands for \textit{hermitian conjugate}.
