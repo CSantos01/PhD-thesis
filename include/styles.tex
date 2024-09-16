@@ -1,5 +1,19 @@
 % Style of the document
 
+% Colors
+\definecolor{Synthred}{RGB}{146, 0, 117}
+\definecolor{Synthblue}{RGB}{46, 33, 87}
+\definecolor{Synthcyan}{RGB}{45, 226, 230}
+\definecolor{Synthpurple}{RGB}{84, 13, 110}
+\definecolor{Synthblack}{RGB}{13, 2, 33}
+% Hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=Synthred,
+    urlcolor=Synthred,
+    citecolor=Synthred,
+}
+
 % Margins
 \usepackage{vmargin}
 \setpapersize{A4}
@@ -7,11 +21,11 @@
 \setlength{\marginparwidth}{2cm}
 
 % Sections
-\setkomafont{chapter}{\Huge\rmfamily\color{RoyalBlue}}
-\setkomafont{section}{\LARGE\rmfamily\color{RoyalBlue}}
-\setkomafont{subsection}{\Large\rmfamily\color{RoyalBlue}}
-\setkomafont{subsubsection}{\large\rmfamily\color{RoyalBlue}}
-\renewcommand*{\chapterformat}{{\color{RoyalBlue}\thechapter}}
+\setkomafont{chapter}{\Huge\rmfamily\color{Synthpurple}}
+\setkomafont{section}{\LARGE\rmfamily\color{Synthblue}}
+\setkomafont{subsection}{\Large\rmfamily\color{Synthblue}}
+\setkomafont{subsubsection}{\large\rmfamily\color{Synthblue}}
+\renewcommand*{\chapterformat}{{\color{Synthpurple}\thechapter}}
 \renewcommand\chapterlinesformat[3]{#2\par#3\vspace{5cm}}
 
 % Paragraphs
